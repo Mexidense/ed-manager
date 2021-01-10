@@ -18,8 +18,8 @@ const initialState = {
             photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Luis_Su%C3%A1rez_2018.jpg/220px-Luis_Su%C3%A1rez_2018.jpg',
         },
     ],
-    roster: [],
-    substitutePlayers: []
+    rosters: [],
+    substitutes: []
 }
 
 const managerReducer = (state = initialState, action) => {

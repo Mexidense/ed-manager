@@ -1,4 +1,6 @@
 import React from 'react';
+import Rosters from '../Rosters/Rosters'
+import Substitutes from '../Substitutes/Substitutes'
 
 const SelectedTeamPlayers = () => (
   <div>
@@ -6,3 +8,5 @@ const SelectedTeamPlayers = () => (
     <Substitutes />
   </div>
 )
+
+export default SelectedTeamPlayers;

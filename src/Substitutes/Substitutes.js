@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-const Substitutes = () => (
+const Substitutes = ({players}) => (
   <div>
     <h2>Substitutes</h2>
     <div className="field">

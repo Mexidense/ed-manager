@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-const Rosters = () => (
+const Rosters = ({players}) => (
   <div>
     <h2>Rosters</h2>
     <div className="field">
