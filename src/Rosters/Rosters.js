@@ -1,18 +1,18 @@
 import React from "react";
 import { connect } from "react-redux";
 
-const Rosters = ({players}) => (
+const Rosters = ({rosters}) => (
   <div>
     <h2>Rosters</h2>
     <div className="field">
         {
-          players.map(player => (
+          rosters.map(roster => (
             <div className="roster">
               <div>
-                <img src={player.photo} alt={player.name} />
+                <img src={roster.photo} alt={roster.name} />
                 <button>X</button>
               </div>
-              <p>{player.name}</p>
+              <p>{roster.name}</p>
             </div>
           ))
         }
