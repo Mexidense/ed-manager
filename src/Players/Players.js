@@ -7,8 +7,9 @@ const Players = ({ players, addRoster, addSubstitute }) => (
   <div>
     <h2>Players</h2>
     <div className="players-container">
-      { players.map((player) => (
-          <article key={player.id}>
+      { 
+        players.map((player) => (
+          <article className="player" key={player.id}>
             <img src={player.photo} alt={player.name} />
             <h3>{player.name}</h3>
             <div>
