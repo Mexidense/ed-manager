@@ -7,13 +7,13 @@ const Substitutes = ({substitutes}) => (
     <div className="field">
         {
           substitutes.map(substitute => (
-            <div className="substitute">
+            <acticle className="substitute" key={substitute.id}>
               <div>
                 <img src={substitute.photo} alt={substitute.name} />
                 <button>X</button>
               </div>
               <p>{substitute.name}</p>
-            </div>
+            </acticle>
           ))
         }
     </div>
