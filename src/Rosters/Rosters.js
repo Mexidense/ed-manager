@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import './Rosters.scss';
+import field from './field.svg';
 
 const Rosters = ({rosters, removeRoster}) => (
   <div>
@@ -18,6 +19,7 @@ const Rosters = ({rosters, removeRoster}) => (
             </article>
           ))
         }
+        <img src={field} />
     </div>
   </div>
 );
