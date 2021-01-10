@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 
+import './Players.scss';
+
 const Players = ({ players, addRoster, addSubstitute }) => (
   <div>
     <h2>Players</h2>

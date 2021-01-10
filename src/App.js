@@ -4,6 +4,8 @@ import store from './store';
 import Players from './Players/Players';
 import SelectedTeamPlayers from './SelectedTeamPlayers/SelectedTeamPlayers'
 
+import "./App.scss";
+
 const App = () => (
   <Provider store={store}>
     <main>
