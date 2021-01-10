@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-const Substitutes = ({substitutes}) => (
+const Substitutes = ({substitutes, removeSubstitute}) => (
   <div>
     <h2>Substitutes</h2>
     <div className="field">
@@ -10,7 +10,7 @@ const Substitutes = ({substitutes}) => (
             <article className="substitute" key={substitute.id}>
               <div>
                 <img src={substitute.photo} alt={substitute.name} />
-                <button>X</button>
+                <button onClick={() => removeSubstitute(substitute)}>X</button>
               </div>
               <p>{substitute.name}</p>
             </article>
@@ -24,6 +24,13 @@ const mapStateToProps = state => ({
 	substitutes: state.substitutes
 })
 
-const mapDispatchToProps = dispatch => ({})
+const mapDispatchToProps = dispatch => ({
+  removeSubstitute(substitute) {
+    dispatch({
+      type: 'REMOVE_SUBSTITUTE',
+      substitute
+    })
+  }
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(Substitutes);

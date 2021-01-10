@@ -48,6 +48,14 @@ const managerReducer = (state = initialState, action) => {
         }
     }
 
+    if (action.type === 'REMOVE_SUBSTITUTE') {
+        return {
+            ...state,
+            substitutes: state.substitutes.filter(substitute => substitute.id !== action.substitute.id),
+            players: state.players.concat(action.substitute)
+        }
+    }
+
     return state;
 }
 
