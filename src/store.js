@@ -31,7 +31,15 @@ const managerReducer = (state = initialState, action) => {
             players: state.players.filter(player => player.id !== action.player.id)
         }
     }
-    console.log(action);
+
+    if (action.type === 'ADD_SUBSTITUTE') {
+        return {
+            ...state,
+            substitutes: state.substitutes.concat(action.player),
+            players: state.players.filter(player => player.id !== action.player.id)
+        }
+    }
+
     return state;
 }
 

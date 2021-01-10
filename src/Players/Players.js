@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-const Players = ({ players, addRoster }) => (
+const Players = ({ players, addRoster, addSubstitute }) => (
   <div>
     <h2>Players</h2>
     <div className="players-container">
@@ -11,9 +11,7 @@ const Players = ({ players, addRoster }) => (
             <h3>{player.name}</h3>
             <div>
               <button onClick={() => addRoster(player)}>Roster</button>
-              <button>
-              {/* onClick={() => addSubstitute(player)}> */}
-                Substitute</button>
+              <button onClick={() => addSubstitute(player)}>Substitute</button>
             </div>
           </article>
         ))
@@ -33,6 +31,13 @@ const mapDispatchToProps = (dispatch) => ({
       player,
     });
   },
+
+  addSubstitute(player) {
+    dispatch({
+      type: "ADD_SUBSTITUTE",
+      player
+    })
+  }
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Players);
