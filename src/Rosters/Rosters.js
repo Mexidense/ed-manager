@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-const Rosters = ({rosters}) => (
+const Rosters = ({rosters, removeRoster}) => (
   <div>
     <h2>Rosters</h2>
     <div className="field">
@@ -10,7 +10,7 @@ const Rosters = ({rosters}) => (
             <article className="roster" key={roster.id}>
               <div>
                 <img src={roster.photo} alt={roster.name} />
-                <button>X</button>
+                <button onClick={() => removeRoster(roster)}>X</button>
               </div>
               <p>{roster.name}</p>
             </article>
@@ -24,6 +24,13 @@ const mapStateToProps = state => ({
 	rosters: state.rosters
 })
 
-const mapDispatchToProps = dispatch => ({})
+const mapDispatchToProps = dispatch => ({
+  removeRoster(roster) {
+    dispatch({
+      type: 'REMOVE_ROSTER',
+      roster
+    })
+  }
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(Rosters);

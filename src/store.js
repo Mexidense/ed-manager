@@ -40,6 +40,14 @@ const managerReducer = (state = initialState, action) => {
         }
     }
 
+    if (action.type === 'REMOVE_ROSTER') {
+        return {
+            ...state,
+            rosters: state.rosters.filter(roster => roster.id !== action.roster.id),
+            players: state.players.concat(action.roster)
+        }
+    }
+
     return state;
 }
 
