@@ -46,3 +46,12 @@
     }
   }
 }
+
+.substitutes-container {
+  padding-bottom: 2rem;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  overflow-y: auto;
+  height: 300px;
+}

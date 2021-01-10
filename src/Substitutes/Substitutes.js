@@ -6,7 +6,7 @@ import './Substitutes.scss';
 const Substitutes = ({substitutes, removeSubstitute}) => (
   <div>
     <h2>Substitutes</h2>
-    <div className="field">
+    <div className="substitutes-container">
         {
           substitutes.map(substitute => (
             <article className="substitute" key={substitute.id}>
