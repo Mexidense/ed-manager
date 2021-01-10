@@ -19,7 +19,7 @@ const Rosters = ({rosters, removeRoster}) => (
             </article>
           ))
         }
-        <img src={field} />
+        <img src={field} alt="field"/>
     </div>
   </div>
 );

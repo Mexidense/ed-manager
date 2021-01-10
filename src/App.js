@@ -9,7 +9,7 @@ import "./App.scss";
 const App = () => (
   <Provider store={store}>
     <main>
-      <h1>ED Manager</h1>
+      <h1>The 100 best male footballers in the world 2020</h1>
       <Players />
       <SelectedTeamPlayers />
     </main>
