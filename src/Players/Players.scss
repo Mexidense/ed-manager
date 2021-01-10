@@ -1,11 +1,9 @@
 .player {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 1rem;
   border-radius: 0.25rem;
   box-shadow: 0 2px 4px 2px rgba(#000, 0.05);
   border: 1px solid #104266;
+  text-align: center;
 
   h3 {
     margin-bottom: var(--spacing);
@@ -43,6 +41,8 @@
 }
 
 .players-container {
-  overflow: auto;
   padding-bottom: 2rem;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
