@@ -1,3 +1,4 @@
+import { act } from 'react-dom/test-utils';
 import { createStore } from 'redux';
 
 const initialState = {
@@ -23,6 +24,13 @@ const initialState = {
 }
 
 const managerReducer = (state = initialState, action) => {
+    if (action.type === 'ADD_ROSTER') {
+        return {
+            ...state,
+            rosters: state.rosters.concat(action.player)
+        }
+    }
+    console.log(action);
     return state;
 }
 

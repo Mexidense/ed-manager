@@ -7,13 +7,13 @@ const Rosters = ({rosters}) => (
     <div className="field">
         {
           rosters.map(roster => (
-            <acticle className="roster" key={roster.id}>
+            <article className="roster" key={roster.id}>
               <div>
                 <img src={roster.photo} alt={roster.name} />
                 <button>X</button>
               </div>
               <p>{roster.name}</p>
-            </acticle>
+            </article>
           ))
         }
     </div>
