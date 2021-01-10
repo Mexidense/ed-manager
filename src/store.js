@@ -27,7 +27,8 @@ const managerReducer = (state = initialState, action) => {
     if (action.type === 'ADD_ROSTER') {
         return {
             ...state,
-            rosters: state.rosters.concat(action.player)
+            rosters: state.rosters.concat(action.player),
+            players: state.players.filter(player => player.id !== action.player.id)
         }
     }
     console.log(action);
