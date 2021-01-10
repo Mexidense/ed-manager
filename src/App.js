@@ -8,8 +8,7 @@ const App = () => (
     <main>
       <h1>ED Manager</h1>
       <Players />
-  
-      
+      <SelectedTeamPlayers />
     </main>
   </Provider>
 );
