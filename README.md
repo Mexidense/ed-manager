@@ -18,3 +18,7 @@ ED Manager is a React application for that you can up it on development mode: `n
 or
 
 create a production environment: `npm  build`
+
+or 
+
+visit here: [ED Manager by Mexidense](https://mexidense.github.io/ed-manager)
