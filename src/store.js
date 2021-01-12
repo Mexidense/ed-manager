@@ -1,5 +1,7 @@
 import { createStore } from 'redux';
 
+const MAX_ROSTER_PLAYERS = 11;
+
 const initialState = {
     players: [
         {
@@ -99,6 +101,14 @@ const initialState = {
 
 const managerReducer = (state = initialState, action) => {
     if (action.type === 'ADD_ROSTER') {
+        if (state.rosters.length >= MAX_ROSTER_PLAYERS) {
+            return {
+                ...state,
+                substitutes: state.substitutes.concat(action.player),
+                players: state.players.filter(player => player.id !== action.player.id)
+            }
+        }
+
         return {
             ...state,
             rosters: state.rosters.concat(action.player),
